@@ -19,8 +19,10 @@ connectDB();
 
 // import routes
 const userRoute = require('./routes/userRoute');
+const productRoute = require('./routes/productRoute');
 
 app.use('/api/users',userRoute)
+app.use('/api/products',productRoute)
 
 app.get('/', (req,res) => {
     return  res.send("<h1>Hello E-commerse!</h1>");
